@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid text-center  ">
+<h1></h1>
+<div class="text-center">
+    <nav class="navbar navbar-light bg-light mx-auto">
+        <span class="navbar-brand mb-0 h1">Password Generator</span>
+    </nav>
+</div>
+<div class="pt-4 text-center">
+
+
+    <form action="{% url "password" %}">
+        <div class="card mx-auto" style="width: 18rem;">
+            <div class="card-header">
+                <h4>Generate Password</h4>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item mx-auto">
+                    <div class="input-group mb-3 text-center ">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text btn-outline-warning" for="inputGroupSelect01">How
+                                Long</label>
+                        </div>
+                        <select name="length" class="custom-select" id="inputGroupSelect01">
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11" selected="selected">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                        </select>
+                    </div>
+
+                </li>
+                <li class="list-group-item">
+                    <input type="checkbox" name="uppercase">UpperCase
+                </li>
+                <li class="list-group-item">
+                    <input type="checkbox" name="lowercase">LowerCase
+                </li>
+                <li class="list-group-item">
+                    <input type="checkbox" name="numbers">Numbers
+                </li>
+                <li class="list-group-item">
+                    <input type="checkbox" name="special">SpecialCase
+                </li>
+
+            </ul>
+
+
+        </div>
+        <div class="pt-3">
+            <button class="btn btn-outline-primary " type="submit">generate password</button>
+
+        </div>
+
+    </form>
+
+    {#    <form action="{% url "password" %}">#}
+    {#        <select name="length" id="">#}
+    {#            <option value="6">6</option>#}
+    {#            <option value="7">7</option>#}
+    {#            <option value="8">8</option>#}
+    {#            <option value="9">9</option>#}
+    {#            <option value="10">10</option>#}
+    {#            <option value="11" selected="selected">11</option>#}
+    {#            <option value="12">12</option>#}
+    {#            <option value="13">13</option>#}
+    {##}
+    {#        </select> <br>#}
+    {#        <input type="checkbox" name="uppercase">UpperCase#}
+    {#        <br>#}
+    {#        <input type="checkbox" name="lowercase">LowerCase#}
+    {#        <br>#}
+    {#        <input type="checkbox" name="numbers">Numbers#}
+    {#        <br>#}
+    {#        <input type="checkbox" name="special">SpecialCase#}
+    {#        <br>#}
+    {#        <button class="btn btn-outline-primary" type="submit">generate password</button>#}
+    {#    </form>#}
+    <br>
+    <a href="{% url "about" %}">About Page</a>
+
+</div>
+</body>
+</html>
